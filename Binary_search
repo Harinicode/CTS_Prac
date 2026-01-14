@@ -1,0 +1,32 @@
+import java.util.*;
+class A
+{
+    public static int binary_search (int a[],int ele)
+    {
+        int beg=0;
+        int end=a.length-1;
+        while(beg<=end)
+        {
+            int mid=(beg+end)/2;
+            if(a[mid]==ele)
+                return mid;
+            else if(a[mid]>ele)
+                end=mid-1;
+            else
+                beg=mid+1;
+        }
+        return -1;
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        int a[]={5,2,7,1,8,0};
+        Arrays.sort(a);
+        System.out.println("After Sorting");
+        for(int i=0;i<a.length;i++)
+        System.out.print(a[i]+" ");
+        int pos=A.binary_search(a,7);
+        System.out.println((pos>=0)?"\nEle found at "+ pos:"\nEle not found");
+        
+    }
+}
