@@ -1,0 +1,13 @@
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        System.out.println("Try programiz.pro");
+        int a[]={5,2,7,1,8,0};
+        int b[]=new int[a.length];
+       Arrays.sort(a);
+        int len= a.length;
+        int largest=a[len-1];
+        System.out.println(largest);
+        
+    }
+}
