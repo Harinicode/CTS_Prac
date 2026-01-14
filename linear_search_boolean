@@ -1,0 +1,23 @@
+import java.util.*;
+class A
+{
+    public static boolean find_ele_pos(int a[],int ele)
+    {
+        for(int i=0;i<a.length;i++)
+        {
+            if(a[i]==ele)
+            {
+             return true;   
+            }
+        }
+        return false;
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        System.out.println("Try programiz.pro");
+        int a[]={5,2,7,1,8,0};
+        System.out.println( A.find_ele_pos(a,7)?"Ele found":"Ele not found");
+        
+    }
+}
